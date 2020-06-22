@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, FormEvent } from 'react'
 
-function App() {
+import M from 'materialize-css'
+
+const App = () => {
+  const [text, setText] = useState('')
+  const [isSubmitting, setSubmitting] = useState(false)
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault()
+    setSubmitting(true)
+    window.M.toast({ html: '送信しました！', classes: 'green rounded' })
+    setSubmitting(false)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App blue lighten-5' style={{ minHeight: '100vh' }}>
+      <nav>
+        <div className='nav-wrapper indigo'>
+          <span className='brand-logo center'>&#x1f423;</span>
+        </div>
+      </nav>
+      <div className='container'>
+        <form onSubmit={handleSubmit}>
+          <input type='text' />
+          <button
+            className='btn waves-effect waves-light indigo'
+            type='submit'
+            name='action'
+          >
+            送信
+            <i className='material-icons right'>send</i>
+          </button>
+          <div
+            className={`preloader-wrapper small ${isSubmitting && 'active'}`}
+          >
+            <div className='spinner-layer spinner-green-only'>
+              <div className='circle-clipper left'>
+                <div className='circle'></div>
+              </div>
+              <div className='gap-patch'>
+                <div className='circle'></div>
+              </div>
+              <div className='circle-clipper right'>
+                <div className='circle'></div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
