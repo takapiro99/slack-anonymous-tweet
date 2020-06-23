@@ -20,9 +20,9 @@ const App = () => {
     console.log(text)
     const payload: any = {
       channel: '#つぶやき',
-      username: 'tweet bot',
+      username: 'tweet bot', //name
       text: text,
-      icon_emoji: 'hatching_chick'
+      icon_emoji: 'hatching_chick' // 絵文字
     }
 
     const config: any = {
