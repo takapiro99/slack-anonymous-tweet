@@ -56,7 +56,15 @@ const App = () => {
       </nav>
       <div style={{ height: '5em' }} />
       <div className='container'>
-        <p className='grey-text small'>　つぶやきはこちらから</p>
+        <p className='grey-text small'>　つぶやきはこちらから!!!!!!!!</p>
+        <p className='grey-text small'>　つぶやきはこちらから!!!!!!!!</p>
+        <p className='grey-text small'>　つぶやきはこちらから!!!!!!!!</p>
+        <p className='grey-text small'>　つぶやきはこちらから!!!!!!!!</p>
+        <p className='grey-text small'>　つぶやきはこちらから!!!!!!!!</p>
+        <p className='grey-text small'>　つぶやきはこちらから!!!!!!!!</p>
+        <p className='grey-text small'>　つぶやきはこちらから!!!!!!!!</p>
+        <p className='grey-text small'>　つぶやきはこちらから!!!!!!!!</p>
+        <p className='grey-text small'>　つぶやきはこちらから!!!!!!!!</p>
         <form onSubmit={(e: FormEvent) => e.preventDefault()}>
           <div className='row'>
             <div className='col s8'>
